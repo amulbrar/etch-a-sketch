@@ -20,8 +20,16 @@ let containerDiv = document.querySelector('.container');
 
 let randomBtn = document.querySelector('.random-btn');
 let isRandomColors = false;
+let clicked = false;
+randomBtn.textContent = "Rainbows off"
 randomBtn.addEventListener('click', () => {
     isRandomColors = !isRandomColors;
+    clicked = !clicked
+    if (clicked == true) {
+        randomBtn.textContent = "Rainbows on";
+    } else {
+        randomBtn.textContent = "Rainbows off";
+    }
 })
 
 function createGrid(resolution) {
